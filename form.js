@@ -12,7 +12,9 @@ function getFormData(formDataEle) {
 }
 formData.addEventListener("submit", (event) => {
   event.preventDefault();
-  document.getElementById("table").classList.toggle("displayNone");
+  let table = document.getElementById("table");
+  table.classList.remove("displayNone");
+  table.classList.add("displayBlock");
   getElement("displayDate").innerText = getFormData("date").value;
   getElement("displayFullName").innerText = getFormData("fullname").value;
   getElement("displayInformation").innerText = getFormData("info").value;
