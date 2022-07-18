@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./form.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <form id="formdata" name="formdata">
+        <h3>You are One Click away:</h3>
+        <label for="fullname">Fullname</label>
+        <input
+          type="text"
+          id="fullname"
+          placeholder="Enter your fullname"
+          required
+        />
+
+        <label for="password">Password</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Enter the password"
+          required
+        />
+
+        <label for="email">Email</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Enter your email id"
+          required
+        />
+
+        <label for="date">Birth Date:</label>
+        <input type="date" name="date" id="date" required />
+
+        <label for="gender">Select Gender</label>
+        <div class="gender">
+          <div class="male">
+            <input type="radio" name="gender" id="male" required />
+            <label for="male">Male</label>
+          </div>
+          <div class="female">
+            <input type="radio" name="gender" id="female" required />
+            <label for="female">Female</label>
+          </div>
+        </div>
+
+        <label for="mobileNumber">Enter your Mobile Number:</label>
+        <input
+          type="tel"
+          name="mobileNumber"
+          id="mobileNumber"
+          placeholder="eg. 9348445465"
+          maxlength="10"
+          onkeyup="value=value.replace(/[^ \d+]/,'')"
+        />
+
+        <label for="info">Your Information:</label>
+        <textarea
+          name="info"
+          id="info"
+          cols="30"
+          rows="10"
+          placeholder="Tell us about yourself"
+          required
+        ></textarea>
+
+        <label for="laptop">Select your Laptop:</label>
+        <select name="laptop" id="laptop" required>
+          <option value="">--Select your laptop from dropdown--</option>
+          <option value="Acer Nitro">Acer Nitro</option>
+          <option value="Asus TUF gaming">Asus TUF gaming</option>
+          <option value="Macbook Air">Macbook Air</option>
+          <option value="Windows Surface 7">Windows Surface 7</option>
+        </select>
+
+        <div class="terms">
+          <input
+            type="checkbox"
+            name="terms_condition"
+            id="terms_condition"
+            required
+          />
+          <label for="terms_condition"
+            >&nbsp;&nbsp; I accept the terms and conditions.</label
+          >
+        </div>
+
+        <div class="buttons">
+          <input type="submit" value="Submit" />
+          <input type="reset" value="Reset" />
+        </div>
+      </form>
+    </div>
+
+    <div class="output" id="output">
+      <table id="table" class="displayNone">
+        <thead>
+          <th>Sr. No.</th>
+          <th>Details</th>
+          <th>Data</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Fullname</td>
+            <td id="displayFullName"></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Email</td>
+            <td id="displayEmailId"></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Mobile Number:</td>
+            <td id="displayMobileNumber"></td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Date</td>
+            <td id="displayDate"></td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Gender</td>
+            <td id="displayGender"></td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>Information</td>
+            <td id="displayInformation"></td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>Laptop type:</td>
+            <td id="displaySelection"></td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>Terms and Conditions Accepted?</td>
+            <td id="displayTermsAndCondition"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <script src="./form.js"></script>
+  </body>
+</html>
